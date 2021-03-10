@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-![Screenshot_2021-03-10 React App](https://user-images.githubusercontent.com/60151264/110619226-37738480-81a0-11eb-9667-176e20915e2b.png)
+![Screenshot_2021-03-10 React App](https://user-images.githubusercontent.com/60151264/110620349-9685c900-81a1-11eb-8126-4493042112ca.png)
 
 ## Available Scripts
 

@@ -36,6 +36,37 @@ body {
   display: inline;
   margin-right:5px;
 }
+.todo__btn {
+   display: flex;
+   align-items: center;
+}
+
+.todo__btn .todo__remove {
+    background: red;
+    padding: 4px;
+    border-radius: 10px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.todo__remove:hover {
+ background:crimson;
+}
+
+.todo__strick {
+    text-decoration: line-through;
+}
+
+
+.todo__complation{
+    cursor: pointer;
+    background:rgb(93, 66, 156);
+    padding: 5px;
+    border-radius: 10px;
+}
+.todo__complation:hover {
+    background:rgb(76, 14, 100);
+}
 
 .container {
     
@@ -89,3 +120,20 @@ body {
     cursor: pointer;
 }
 
+.loading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    right: 50%;
+    left: 44%;
+    width: 250px;
+    background: rgb(62, 10, 75);
+    padding: 50px;
+    border-radius: 20px;
+}
+.loading i {
+    font-size: 1.4em;
+    margin-right: 4px;
+}

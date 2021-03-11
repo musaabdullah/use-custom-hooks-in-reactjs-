@@ -6,7 +6,7 @@ function App() {
     var { Data, loading }  = usefetch("https://jsonplaceholder.typicode.com/todos");
     
     
-
+    const [start, setStart] = useState(0);
     const [show, setShow] = useState(5);   
     
     const [completed, setCompleted] = useState(false);
@@ -14,6 +14,8 @@ function App() {
     const showLess  = () => {
         if(show === 5) return ; 
         setShow(show => show - 5)
+        if(start === 0) return ;
+        setStart(start => start - 5)
     }
 
     // const changeCompleted = (id) => {
@@ -35,7 +37,7 @@ function App() {
     
            <div className="container">
                <input type="text" className="container__input" placeholder="Enter todo"/> 
-          {Data.slice(0, show).map((user) => (
+          {Data.slice(start, show).map((user) => (
               <div key={user.id} className="todo">
                   <div className="todo__start">
                   <div className="todo__id">{user.id}.</div>
@@ -49,7 +51,7 @@ function App() {
                   </div>
               ))}  
               <div className="btn">
-                  <button onClick={() => setShow(show => show + 5)} className="btn__more">Show more</button>
+                  <button onClick={() => {if(show===200) return ; setStart(start => start + 5); setShow(show => show + 5) } } className="btn__more">Show more</button>
                   <button onClick={() =>  showLess() } className="btn__less">Show less</button>
               </div>
               </div>
